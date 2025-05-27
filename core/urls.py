@@ -16,6 +16,7 @@ urlpatterns = [
     path('api/auth/', include('djoser.urls')),                            
     path('api/auth/', include('djoser.urls.jwt')),
     path('api/auth/jwt/logout/', LogoutView.as_view(), name='jwt_logout'),
+    path('api/feedback/', include('feedback.urls')),
 
     # Схема OpenAPI
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
